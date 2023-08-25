@@ -140,14 +140,14 @@ ul { list-style: none; }
 	align-items: center;
 }
 .icom-mail::before{
-	display: block;
-	content: "";
+	display: flex;
+
 	height: 16px;
 	width: 16px;
 	background-position: center;
     background-repeat: no-repeat;
 	margin-right: 10px;
-	background-image: url(../images/contacts/envelope\ \(hover\).svg);
+	
 }
 .icom-tel::before{
 	display: block;
@@ -157,8 +157,15 @@ ul { list-style: none; }
 	background-position: center;
     background-repeat: no-repeat;
 	margin-right: 10px;
-	background-image: url(../images/contacts/smartphone.svg);
+	
 }
+
+.contacts-icon{
+	
+	margin-right: 10px;
+	
+}
+
 
 
 
@@ -168,28 +175,36 @@ ul { list-style: none; }
 }
 
 .contacts .link {
-	display: block;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	padding-top: 32px;
 	padding-bottom: 32px;
-
 	color: var(--secondary-link-color);
-
+    fill: #757575;
 	font-weight: 500;
 	font-size: 14px;
 	line-height: 1.14;
 	letter-spacing: 0.02em;
 }
+.contacts-item{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 
-
-.contacts .link:hover,
-.contacts .link:active,
-.contacts .link:focus {
-
+.link:hover,
+.link:active,
+.link:focus {
+	fill: #2196F3;
 	color: var(--accent-color);
+
 }
 
   /* Блок герой */
 .hero {
+	display: block;
+	margin: 0px auto;
 	padding: 200px 0;
 	width: 1600px;
 	height: 600px;
@@ -222,10 +237,15 @@ ul { list-style: none; }
 	text-transform: uppercase;
 }
 
-.button {
+.button-hero {
+	display: block;
+	margin: 0px auto;
+	align-items: center;
+	justify-content: center;
 	padding: 10px 32px;
 	border: none;
 	border-radius: 4px;
+
 
 	color: var(--primary-bg-color);
 	background-color: var(--accent-color);
@@ -253,7 +273,7 @@ ul { list-style: none; }
 }
 
 .advantages .titel {
-	margin-top: 0px;
+	margin-top: 30px;
 	margin-bottom: 10px;
 
 	font-weight: 700;
@@ -271,28 +291,34 @@ ul { list-style: none; }
 	background-repeat: no-repeat;
 	background-position: center;
 }
-.list-item:nth-child(1)::before{
-	background-image: url(../images/Advantage/antenna.png);
+.advantages-text{
+	margin-top: 0px;
 }
-.list-item:nth-child(2)::before{
-	background-image: url(../images/Advantage/clock.png);
-}
-.list-item:nth-child(3)::before{
-	background-image: url(../images/Advantage/diagram.png);
-}
-.list-item:nth-child(4)::before{
-	background-image: url(../images/Advantage/austronavt.png);
+
+.advantages-icon{}
+
+
+.advantages-svg{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #F5F4FA;
+	width: 270px;
+	height: 120px;
 }
 
 .advantages .list-item > .text {
 	margin: 0;
+}
+.advantages-list{
+	
 }
 
 .advantages .list-item {
 	width: 270px;
 }
 
-.advantages .list-item:not(:last-child) {
+.advantages-list:not(:last-child) {
 	margin-right: 30px;
 }
 
@@ -589,6 +615,12 @@ ul { list-style: none; }
 
 
   /* Портфолио */
+
+
+.galerry-card:hover,
+.galerry-card:focus{
+    box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12)
+}
 .galerry {
 	padding-top: 94px;
 	padding-bottom: 94px;
@@ -627,10 +659,12 @@ ul { list-style: none; }
 .galerry-button:focus {
 	color: var(--primary-bg-color);
 	background-color: var(--accent-color);
+	box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.10);
 }
 
   /* Карты галереи */
 .galerry-card {
+	display: block;
 	color: var(--primary-text-color);
 	font-size: 16px;
 	line-height: 1.88;
